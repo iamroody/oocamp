@@ -8,7 +8,7 @@ public class DoorManTest {
     @Test
     public void should_park_car_to_parking_lot_when_there_is_lot() {
         ParkingLot parkingLot = new ParkingLot(2);
-        DoorMan doorMan = new DoorMan();
+        DoorMan doorMan = new DoorMan(new NormalRule());
         Car car = new Car();
         doorMan.manage(parkingLot);
 
@@ -24,7 +24,7 @@ public class DoorManTest {
         Car car1 = new Car();
         Car car2 = new Car();
 
-        DoorMan doorMan = new DoorMan();
+        DoorMan doorMan = new DoorMan(new NormalRule());
         doorMan.manage(parkingLot1);
         doorMan.manage(parkingLot2);
 
@@ -39,7 +39,7 @@ public class DoorManTest {
         Car car1 = new Car();
         Car car2 = new Car();
 
-        DoorMan doorMan = new DoorMan();
+        DoorMan doorMan = new DoorMan(new NormalRule());
         doorMan.manage(parkingLot1);
         doorMan.manage(parkingLot2);
 

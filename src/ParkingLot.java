@@ -26,4 +26,8 @@ public class ParkingLot {
     public Car fetchCar(Receipt receipt) {
         return parkedCars.remove(receipt);
     }
+
+    public int availableSize() {
+        return capacity - parkedCars.size();
+    }
 }
