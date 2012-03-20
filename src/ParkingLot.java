@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class ParkingLot {
+public class ParkingLot implements ParkingFacility {
     private int capacity;
     private Map<Receipt, Car> parkedCars;
 
@@ -29,5 +29,9 @@ public class ParkingLot {
 
     public int availableSize() {
         return capacity - parkedCars.size();
+    }
+
+    public double emptyRate() {
+        return (double) availableSize() / capacity;
     }
 }
